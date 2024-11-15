@@ -43,11 +43,16 @@ export default {
           from: { transform: 'rotate(0deg)' },
           to: { transform: 'rotate(180deg)' },
         },
+        splashFade: {
+          from: { transform: 'scale(1)', opacity: '1' },
+          to: { transform: 'scale(0.5)', opacity: '0' },
+        },
       },
       animation: {
         'grow-and-shrink':
           'growAndShrink 1.5s cubic-bezier(0.4, 0, 0.6, 1) forwards',
         'spin-half': 'spinHalf 1s linear infinite',
+        'splash-fade': 'splashFade 0.5s cubic-bezier(0.4, 0, 0.6, 1) forwards',
       },
     },
   },
