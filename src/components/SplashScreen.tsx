@@ -11,7 +11,7 @@ const SplashScreen = () => {
   useEffect(() => {
     const activeTimeout = setTimeout(() => {
       setIsActive(false)
-    }, 2000)
+    }, 3000)
 
     return () => {
       clearTimeout(activeTimeout)
