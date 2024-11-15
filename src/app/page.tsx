@@ -1,3 +1,19 @@
+import Sparkles from '@/components/sparkles'
+import Image from 'next/image'
+
 export default function Home() {
-  return <div>Hello world</div>
+  return (
+    <div className='container'>
+      <div className='grid h-screen place-items-center'>
+        <Sparkles>
+          <Image
+            src='/images/panda-1.svg'
+            width={200}
+            height={200}
+            alt='panda'
+          />
+        </Sparkles>
+      </div>
+    </div>
+  )
 }

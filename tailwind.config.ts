@@ -33,6 +33,22 @@ export default {
           muted: 'var(--primary-muted)',
         },
       },
+      keyframes: {
+        growAndShrink: {
+          '0%': { transform: 'scale(0.8)', opacity: '0' },
+          '60%': { transform: 'scale(1)', opacity: '1' },
+          '100%': { transform: 'scale(1)', opacity: '0' },
+        },
+        spinHalf: {
+          from: { transform: 'rotate(0deg)' },
+          to: { transform: 'rotate(180deg)' },
+        },
+      },
+      animation: {
+        'grow-and-shrink':
+          'growAndShrink 1.5s cubic-bezier(0.4, 0, 0.6, 1) forwards',
+        'spin-half': 'spinHalf 1s linear infinite',
+      },
     },
   },
   plugins: [

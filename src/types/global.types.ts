@@ -1,1 +1,3 @@
-export type SVGComponent = React.FC<React.ComponentProps<'svg'>>
+export type SVGComponent<T = unknown> = React.FC<
+  React.ComponentProps<'svg'> & T
+>
