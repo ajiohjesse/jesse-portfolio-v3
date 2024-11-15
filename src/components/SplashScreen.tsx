@@ -37,6 +37,9 @@ const SplashScreen = () => {
         >
           <Logo className='size-32 text-primary duration-1000 animate-in zoom-in-50 md:size-44' />
           <Signature className='w-[200px] text-primary' data-id='signature' />
+          <p className='mt-8 text-sm duration-1000 animate-in zoom-in-50'>
+            FULLSTACK DEVELOPER
+          </p>
         </div>
       </div>
     </div>
