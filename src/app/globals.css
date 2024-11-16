@@ -8,6 +8,7 @@
     --background-darker: #010a0e;
 
     --foreground: #e4e4e4;
+    --foreground-muted: #9ca3af;
 
     --card: #012533;
 
@@ -22,6 +23,11 @@
     color: var(--foreground);
     background: var(--background);
     font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  body:has([data-nav-open='true']) {
+    overflow: hidden;
   }
 
   @media (prefers-color-scheme: dark) {

@@ -1,4 +1,5 @@
-import SplashScreen from '@/components/SplashScreen'
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
@@ -29,8 +30,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SplashScreen />
-        {children}
+        {/* <SplashScreen /> */}
+        <Header />
+        <main>{children}</main>
+        <div className='h-[500px]'></div>
+        <Footer />
       </body>
     </html>
   )

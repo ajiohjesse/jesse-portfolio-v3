@@ -26,7 +26,10 @@ export default {
           DEFAULT: 'var(--background)',
           darker: 'var(--background-darker)',
         },
-        foreground: 'var(--foreground)',
+        foreground: {
+          DEFAULT: 'var(--foreground)',
+          muted: 'var(--foreground-muted)',
+        },
         card: 'var(--card)',
         primary: {
           DEFAULT: 'var(--primary)',
@@ -62,7 +65,7 @@ export default {
       addComponents({
         '.container': {
           width: '90%',
-          maxWidth: '1024px',
+          maxWidth: '900px',
           marginLeft: 'auto',
           marginRight: 'auto',
         },
