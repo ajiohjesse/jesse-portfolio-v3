@@ -1,7 +1,7 @@
 'use client'
 
 import useRandomInterval from '@/hooks/useRandomInterval'
-import { randomInt } from '@/lib/utils'
+import { cn, randomInt } from '@/lib/utils'
 import { useState } from 'react'
 import { SparkleStar } from './icons/SparkleStar'
 
@@ -26,7 +26,10 @@ const generateSparkle = (color = DEFAULT_COLOR) => {
 
 type Sparkle = ReturnType<typeof generateSparkle>
 
-const Sparkles: React.FC<React.PropsWithChildren> = ({ children }) => {
+const Sparkles: React.FC<{ children: React.ReactNode; className?: string }> = ({
+  children,
+  className,
+}) => {
   const [sparkles, setSparkles] = useState<Sparkle[]>([])
 
   useRandomInterval(
@@ -49,7 +52,7 @@ const Sparkles: React.FC<React.PropsWithChildren> = ({ children }) => {
   )
 
   return (
-    <span className='relative inline-block leading-none'>
+    <span className={cn('relative inline-block leading-none', className)}>
       {sparkles.map(sparkle => (
         <SparkleStar
           key={sparkle.id}

@@ -9,7 +9,7 @@ import Logo from './icons/Logo'
 import MenuButton from './MenuButton'
 
 const Header = () => {
-  const [isMenuOpen, setMenuOpen] = useState(true)
+  const [isMenuOpen, setMenuOpen] = useState(false)
 
   return (
     <header className='bg-background/95 sticky top-0 z-[99] backdrop-blur-3xl'>
@@ -56,7 +56,7 @@ const NavLink: React.FC<{
     <Boop>
       <Link
         className={cn(
-          'flex flex-col transition-colors duration-300 will-change-transform after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-200 after:ease-linear hover:text-foreground hover:after:w-4',
+          'flex flex-col items-center transition-colors duration-300 will-change-transform after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-200 after:ease-linear hover:text-foreground hover:after:w-4 md:items-start',
           isActive && 'text-foreground after:w-4',
         )}
         href={href}

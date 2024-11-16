@@ -17,7 +17,7 @@ const Boop = ({ children, className, config = { scale: 1.08 } }: BoopProps) => {
     <animated.span
       onMouseEnter={() => trigger()}
       style={style}
-      className={cn('will-change-transform', className)}
+      className={cn('w-fit will-change-transform', className)}
     >
       {children}
     </animated.span>
