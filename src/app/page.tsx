@@ -2,9 +2,8 @@ import Boop from '@/components/Boop'
 import Github from '@/components/icons/Github'
 import LinkedIn from '@/components/icons/LinkedIn'
 import Mail from '@/components/icons/Mail'
-import StarBadge from '@/components/icons/StarBadge'
+// import StarBadge from '@/components/icons/StarBadge'
 import Twitter from '@/components/icons/Twitter'
-import Sparkles from '@/components/sparkles'
 import Image from 'next/image'
 
 export default function Home() {
@@ -12,7 +11,7 @@ export default function Home() {
     <section className='container flex flex-col-reverse items-center gap-y-4 py-8 md:grid md:grid-cols-2 md:py-16'>
       <div className='flex flex-col gap-y-10 md:items-center lg:gap-y-12'>
         <div className='flex items-center gap-x-4'>
-          <div className='relative size-[90px] rounded-full border-2 border-primary lg:size-[120px]'>
+          {/* <div className='relative size-[90px] rounded-full border-2 border-primary lg:size-[120px]'>
             <Image
               alt='Jesse Ajioh'
               src='/images/jesse-profile.jpg'
@@ -21,7 +20,7 @@ export default function Home() {
               height={300}
             />
             <StarBadge className='absolute -right-2 top-0 size-6 lg:right-0' />
-          </div>
+          </div> */}
           <div>
             <h1 className='font-heading text-3xl uppercase tracking-wide text-primary xs:text-4xl lg:text-5xl'>
               Jesse Ajioh.
@@ -62,15 +61,13 @@ export default function Home() {
         </Boop>
       </div>
 
-      <Sparkles className='md:justify-self-center'>
-        <Image
-          src='/images/panda.svg'
-          width={170}
-          height={200}
-          alt='panda'
-          className='sm:w-[220px] md:w-[260px] lg:w-[300px]'
-        />
-      </Sparkles>
+      <Image
+        src='/images/panda.svg'
+        width={170}
+        height={200}
+        alt='panda'
+        className='sm:w-[220px] md:w-[260px] lg:w-[300px]'
+      />
     </section>
   )
 }

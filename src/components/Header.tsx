@@ -8,7 +8,6 @@ import React, { useState } from 'react'
 import Boop from './Boop'
 import Logo from './icons/Logo'
 import MenuButton from './MenuButton'
-import Sparkles from './sparkles'
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false)
@@ -25,8 +24,8 @@ const Header = () => {
         <div
           data-nav-open={isMenuOpen}
           className={cn(
-            'fixed top-16 z-[98] flex h-[calc(100dvh-64px)] w-full flex-col items-center gap-x-6 gap-y-8 bg-background pt-12 text-foreground-muted transition-all duration-500 md:static md:h-fit md:w-fit md:flex-row md:bg-transparent md:pt-0 lg:gap-x-12',
-            isMenuOpen ? 'right-0' : '-right-[100vw]',
+            'fixed top-16 flex h-[calc(100dvh-64px)] w-full flex-col items-center gap-x-6 gap-y-8 bg-background pt-12 text-foreground-muted transition-all duration-500 md:static md:h-fit md:w-fit md:flex-row md:bg-transparent md:pt-0 lg:gap-x-12',
+            isMenuOpen ? 'right-0' : 'right-[-100%]',
           )}
         >
           <NavLink href='/'>Home</NavLink>
@@ -36,20 +35,20 @@ const Header = () => {
           <NavLink href='/resources'>Resources</NavLink>
           <NavLink href='/contact'>Contact</NavLink>
 
-          <Sparkles className='md:hidden md:justify-self-center'>
-            <Image
-              src='/images/panda-2.svg'
-              width={170}
-              height={200}
-              alt='panda'
-              className='w-[140px]'
-            />
-          </Sparkles>
+          <Image
+            src='/images/panda-2.svg'
+            width={170}
+            height={200}
+            alt='panda'
+            className='w-[140px]'
+          />
         </div>
 
-        <Boop className='md:hidden'>
-          <MenuButton isOpen={isMenuOpen} setOpen={setMenuOpen} />
-        </Boop>
+        <MenuButton
+          isOpen={isMenuOpen}
+          setOpen={setMenuOpen}
+          className='md:hidden'
+        />
       </nav>
     </header>
   )
