@@ -4,41 +4,32 @@ import LinkedIn from '@/components/icons/LinkedIn'
 import Mail from '@/components/icons/Mail'
 // import StarBadge from '@/components/icons/StarBadge'
 import Twitter from '@/components/icons/Twitter'
+import Sparkles from '@/components/sparkles'
 import Image from 'next/image'
 
 export default function Home() {
   return (
-    <section className='container flex flex-col-reverse items-center gap-y-4 py-8 md:grid md:grid-cols-2 md:py-16'>
-      <div className='flex flex-col gap-y-10 md:items-center lg:gap-y-12'>
-        <div className='flex items-center gap-x-4'>
-          {/* <div className='relative size-[90px] rounded-full border-2 border-primary lg:size-[120px]'>
-            <Image
-              alt='Jesse Ajioh'
-              src='/images/jesse-profile.jpg'
-              className='h-full w-full rounded-full object-cover object-top'
-              width={300}
-              height={300}
-            />
-            <StarBadge className='absolute -right-2 top-0 size-6 lg:right-0' />
-          </div> */}
-          <div>
-            <h1 className='font-heading text-3xl uppercase tracking-wide text-primary xs:text-4xl lg:text-5xl'>
-              Jesse Ajioh.
+    <section className='container flex flex-col-reverse items-center gap-y-4 py-8 sm:grid sm:grid-cols-2 md:py-16'>
+      <div className='flex max-w-[350px] flex-col gap-y-8'>
+        <div className='flex gap-x-4'>
+          <div className='flex w-full flex-col items-center justify-center sm:items-start'>
+            <h1 className='font-heading text-[2.5rem] uppercase text-primary sm:text-5xl lg:text-6xl'>
+              Jesse Ajioh
             </h1>
-            <p className='mt-1 font-decorative text-sm text-foreground-muted lg:mt-2 lg:text-[1.375rem]'>
+            <p className='font-mono text-foreground-muted sm:mt-2 sm:text-lg'>
               Fullstack Developer
             </p>
           </div>
         </div>
 
-        <div className='flex w-full max-w-[350px] lg:max-w-full'>
+        <div className='flex w-full justify-center gap-x-8 sm:justify-start'>
           {SOCIALS.map(({ url, icon: Icon, label }) => (
             <a
               key={label}
               href={url}
               target='_blank'
               rel='norefer'
-              className='flex flex-1 items-center justify-center border-r border-primary-muted px-6 text-primary last:border-none lg:px-8'
+              className='text-primary'
             >
               <Boop>
                 <Icon className='size-6' />
@@ -50,7 +41,7 @@ export default function Home() {
 
         <Boop
           className='w-full max-w-[350px] lg:max-w-full'
-          config={{ rotation: 2 }}
+          config={{ scale: 1.01 }}
         >
           <button
             type='button'
@@ -61,13 +52,15 @@ export default function Home() {
         </Boop>
       </div>
 
-      <Image
-        src='/images/panda.svg'
-        width={170}
-        height={200}
-        alt='panda'
-        className='sm:w-[220px] md:w-[260px] lg:w-[300px]'
-      />
+      <Sparkles className='sm:justify-self-center'>
+        <Image
+          src='/images/panda.svg'
+          width={170}
+          height={200}
+          alt='panda'
+          className='sm:w-[220px] md:w-[260px] lg:w-[300px]'
+        />
+      </Sparkles>
     </section>
   )
 }

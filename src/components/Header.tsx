@@ -40,7 +40,7 @@ const Header = () => {
             width={170}
             height={200}
             alt='panda'
-            className='w-[140px]'
+            className='w-[140px] md:hidden'
           />
         </div>
 
