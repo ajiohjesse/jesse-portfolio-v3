@@ -1,7 +1,6 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useState } from 'react'
@@ -23,9 +22,11 @@ const Header = () => {
 
         <div
           data-nav-open={isMenuOpen}
+          style={{
+            right: isMenuOpen ? 0 : '-100%',
+          }}
           className={cn(
-            'fixed top-16 flex h-[calc(100dvh-64px)] w-full flex-col items-center gap-x-6 gap-y-8 bg-background pt-12 text-foreground-muted transition-all duration-500 md:static md:h-fit md:w-fit md:flex-row md:bg-transparent md:pt-0 lg:gap-x-12',
-            isMenuOpen ? 'right-0' : 'right-[-100%]',
+            'fixed top-16 flex h-[calc(100vh-64px)] w-full flex-col items-center gap-x-6 gap-y-8 bg-background pt-12 text-foreground-muted transition-all duration-500 will-change-transform md:static md:h-fit md:w-fit md:flex-row md:bg-transparent md:pt-0 lg:gap-x-12',
           )}
         >
           <NavLink href='/'>Home</NavLink>
@@ -35,13 +36,13 @@ const Header = () => {
           <NavLink href='/resources'>Resources</NavLink>
           <NavLink href='/contact'>Contact</NavLink>
 
-          <Image
+          {/* <Image
             src='/images/panda-2.svg'
             width={170}
             height={200}
             alt='panda'
             className='w-[140px] md:hidden'
-          />
+          /> */}
         </div>
 
         <MenuButton

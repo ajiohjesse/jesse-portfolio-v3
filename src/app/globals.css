@@ -27,9 +27,8 @@
 
   html,
   body {
+    /* height: 100dvh; */
     overflow-x: hidden;
-    /* height: 100%;
-    width: 100vw; */
   }
 
   html:has([data-nav-open='true']),

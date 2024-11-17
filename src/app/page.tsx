@@ -4,7 +4,6 @@ import LinkedIn from '@/components/icons/LinkedIn'
 import Mail from '@/components/icons/Mail'
 // import StarBadge from '@/components/icons/StarBadge'
 import Twitter from '@/components/icons/Twitter'
-import Sparkles from '@/components/sparkles'
 import Image from 'next/image'
 
 export default function Home() {
@@ -52,15 +51,13 @@ export default function Home() {
         </Boop>
       </div>
 
-      <Sparkles className='sm:justify-self-center'>
-        <Image
-          src='/images/panda.svg'
-          width={170}
-          height={200}
-          alt='panda'
-          className='sm:w-[220px] md:w-[260px] lg:w-[300px]'
-        />
-      </Sparkles>
+      <Image
+        src='/images/panda.svg'
+        width={170}
+        height={200}
+        alt='panda'
+        className='sm:w-[220px] sm:justify-self-center md:w-[260px] lg:w-[260px]'
+      />
     </section>
   )
 }

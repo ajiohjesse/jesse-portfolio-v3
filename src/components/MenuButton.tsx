@@ -21,23 +21,33 @@ const MenuButton: React.FC<Props> = ({ isOpen, setOpen, className }) => {
     >
       <span
         aria-hidden
+        style={{
+          transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)',
+          top: isOpen ? '3px' : '0px',
+          width: isOpen ? '24px' : '16px',
+        }}
         className={cn(
-          'relative block h-[2px] w-[16px] self-start rounded-full bg-foreground transition-all duration-300',
-          isOpen && 'top-[3px] w-[24px] rotate-45',
+          'relative block h-[2px] w-[16px] self-start rounded-full bg-foreground transition-all duration-300 will-change-transform',
         )}
       ></span>
       <span
         aria-hidden
+        style={{
+          transform: isOpen ? 'rotate(-45deg)' : 'rotate(0deg)',
+          top: isOpen ? '-3px' : '0px',
+          width: isOpen ? '24px' : '20px',
+        }}
         className={cn(
-          'relative mt-[4px] block h-[2px] w-[20px] self-start rounded-full bg-foreground transition-all duration-300',
-          isOpen && 'bottom-[3px] w-[24px] -rotate-45',
+          'relative my-[4px] block h-[2px] w-[20px] self-start rounded-full bg-foreground transition-all duration-300 will-change-transform',
         )}
       ></span>
       <span
         aria-hidden
+        style={{
+          width: isOpen ? '0px' : '24px',
+        }}
         className={cn(
-          'flex h-[2px] items-center justify-center rounded-full bg-foreground transition-all duration-300',
-          isOpen ? 'w-[0px]' : 'mt-[4px] w-[24px]',
+          'flex h-[2px] items-center justify-center rounded-full bg-foreground transition-all duration-100 will-change-transform',
         )}
       ></span>
       <span className='sr-only'>Toggle Navigation Menu</span>
