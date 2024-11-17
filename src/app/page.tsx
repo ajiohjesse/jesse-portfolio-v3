@@ -13,7 +13,14 @@ export default function Home() {
       <div className='flex flex-col gap-y-10 md:items-center lg:gap-y-12'>
         <div className='flex items-center gap-x-4'>
           <div className='relative size-[90px] rounded-full border-2 border-primary lg:size-[120px]'>
-            <StarBadge className='absolute -right-2 size-6 lg:right-0' />
+            <Image
+              alt='Jesse Ajioh'
+              src='/images/jesse-profile.jpg'
+              className='h-full w-full rounded-full object-cover object-top'
+              width={300}
+              height={300}
+            />
+            <StarBadge className='absolute -right-2 top-0 size-6 lg:right-0' />
           </div>
           <div>
             <h1 className='font-heading text-3xl uppercase tracking-wide text-primary xs:text-4xl lg:text-5xl'>
