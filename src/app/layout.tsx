@@ -52,7 +52,7 @@ export default function RootLayout({
       >
         {/* <SplashScreen /> */}
         <Header />
-        <main className='pb-[500px]'>{children}</main>
+        <main className='pb-[500px] pt-16'>{children}</main>
         <Footer />
       </body>
     </html>

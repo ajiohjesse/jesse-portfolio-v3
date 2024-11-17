@@ -1,11 +1,10 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { Dispatch, SetStateAction } from 'react'
 
 interface Props {
   isOpen: boolean
-  setOpen: Dispatch<SetStateAction<boolean>>
+  setOpen: () => void
   className?: string
 }
 
@@ -13,7 +12,7 @@ const MenuButton: React.FC<Props> = ({ isOpen, setOpen, className }) => {
   return (
     <button
       type='button'
-      onClick={() => setOpen(p => !p)}
+      onClick={setOpen}
       className={cn(
         'flex size-[24px] flex-col items-center justify-center',
         className,
