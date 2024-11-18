@@ -8,7 +8,7 @@
   }
 
   body {
-    --background: hsl(220deg 43% 10%);
+    /* --background: hsl(220deg 43% 10%);
     --foreground: hsl(218, 11%, 65%);
 
     --border: hsl(220, 33%, 18%);
@@ -17,8 +17,18 @@
     --bright: hsl(214deg 43% 83%);
 
     --secondary: hsl(186, 99%, 28%);
-    /* --primary: hsl(186, 80%, 67%); */
-    --primary: hsl(194, 51%, 67%);
+    --primary: hsl(194, 51%, 67%); */
+
+    --background: hsl(216deg 65% 11%);
+    --foreground: hsl(227, 28%, 67%);
+
+    --border: hsl(220, 33%, 18%);
+
+    --card: hsl(218, 51%, 16%);
+    --bright: hsl(212, 62%, 96%);
+
+    --secondary: hsl(186, 99%, 28%);
+    --primary: hsl(145, 90%, 70%);
 
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
@@ -57,7 +67,7 @@
       transparent,
       transparent,
       transparent,
-      rgba(63, 96, 125, 0.963)
+      hsla(145, 90%, 70%, 0.5)
     );
     position: absolute;
     top: -500%;
@@ -71,6 +81,7 @@
     margin: 1px;
     position: relative;
     z-index: 1;
+    height: calc(100% - 2px);
   }
 
   @keyframes rotate {
@@ -78,4 +89,12 @@
       transform: rotate(360deg);
     }
   }
+}
+
+.slick-dots {
+  bottom: -32px !important;
+}
+
+.slick-dots > li {
+  margin: 8px !important;
 }

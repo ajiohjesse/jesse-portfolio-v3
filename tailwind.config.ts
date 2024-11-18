@@ -75,7 +75,7 @@ export default {
     function ({ addComponents }: PluginAPI) {
       addComponents({
         '.container': {
-          width: '90%',
+          width: '88%',
           maxWidth: '700px',
           marginLeft: 'auto',
           marginRight: 'auto',
