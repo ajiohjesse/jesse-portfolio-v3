@@ -3,42 +3,31 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    border-color: var(--border);
+  }
+
   body {
-    --background: #001219;
-    --background-darker: #010a0e;
+    --background: hsl(220deg 43% 10%);
+    --foreground: hsl(218, 11%, 65%);
 
-    --foreground: #e4e4e4;
-    --foreground-muted: #9ca3af;
+    --border: hsl(220, 33%, 18%);
 
-    --card: #012533;
+    --card: hsl(222, 33%, 16%);
+    --bright: hsl(214deg 43% 83%);
 
-    --primary: #55eeff;
-    --primary-muted: #11535a;
+    --secondary: hsl(186, 99%, 28%);
+    /* --primary: hsl(186, 80%, 67%); */
+    --primary: hsl(194, 51%, 67%);
 
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
-    --font-heading: var(--font-dm-serif-display);
-    --font-decorative: var(--font-rock-salt);
 
     color: var(--foreground);
     background-color: var(--background);
     font-family: var(--font-sans);
-    overflow-x: hidden;
-  }
-  /* 
-  html,
-  body {
-    height: 100dvh;
-    overflow-x: hidden;
-  }
-    */
 
-  html:has([data-nav-open='true']),
-  body:has([data-nav-open='true']) {
-    overflow: hidden;
-  }
-
-  @media (prefers-color-scheme: dark) {
+    overflow-x: hidden;
   }
 
   svg[data-id='signature'] > path {
@@ -52,6 +41,41 @@
   @keyframes draw {
     to {
       stroke-dashoffset: 0;
+    }
+  }
+
+  [data-id='border-card'] {
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+    min-width: fit-content;
+  }
+
+  [data-id='border-card']::after {
+    content: '';
+    background-image: conic-gradient(
+      transparent,
+      transparent,
+      transparent,
+      rgba(63, 96, 125, 0.963)
+    );
+    position: absolute;
+    top: -500%;
+    left: -500%;
+    bottom: -500%;
+    right: -500%;
+    animation: rotate 20s linear infinite;
+  }
+
+  [data-id='border-card-inner'] {
+    margin: 1px;
+    position: relative;
+    z-index: 1;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(360deg);
     }
   }
 }

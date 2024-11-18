@@ -1,3 +1,4 @@
+import typography from '@tailwindcss/typography'
 import type { Config } from 'tailwindcss'
 import animate from 'tailwindcss-animate'
 import { fontFamily, screens } from 'tailwindcss/defaultTheme'
@@ -18,23 +19,15 @@ export default {
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
         mono: ['var(--font-mono)', ...fontFamily.mono],
-        heading: ['var(--font-heading)', ...fontFamily.serif],
-        decorative: ['var(--font-decorative)', ...fontFamily.sans],
       },
       colors: {
-        background: {
-          DEFAULT: 'var(--background)',
-          darker: 'var(--background-darker)',
-        },
-        foreground: {
-          DEFAULT: 'var(--foreground)',
-          muted: 'var(--foreground-muted)',
-        },
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+        bright: 'var(--bright)',
         card: 'var(--card)',
-        primary: {
-          DEFAULT: 'var(--primary)',
-          muted: 'var(--primary-muted)',
-        },
+        border: 'var(--border)',
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
       },
       keyframes: {
         growAndShrink: {
@@ -57,15 +50,33 @@ export default {
         'spin-half': 'spinHalf 1s linear infinite',
         'splash-fade': 'splashFade 0.5s cubic-bezier(0.4, 0, 0.6, 1) forwards',
       },
+      typography: () => ({
+        DEFAULT: {
+          css: {
+            '--tw-prose-body': 'var(--foreground)',
+            '--tw-prose-headings': 'var(--foreground)',
+
+            strong: 'var(--bright)',
+            a: {
+              color: 'var(--secondary)',
+              textDecoration: 'underline',
+              '&:hover': {
+                color: 'var(--primary)',
+              },
+            },
+          },
+        },
+      }),
     },
   },
   plugins: [
     animate,
+    typography,
     function ({ addComponents }: PluginAPI) {
       addComponents({
         '.container': {
           width: '90%',
-          maxWidth: '900px',
+          maxWidth: '700px',
           marginLeft: 'auto',
           marginRight: 'auto',
         },
