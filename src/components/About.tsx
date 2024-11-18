@@ -5,7 +5,7 @@ const About = () => {
         <span className='text-primary'>1.</span> About Me.
       </h2>
 
-      <div className='grid grid-cols-2 gap-4'>
+      <div className='mb-6 grid grid-cols-2 gap-4'>
         <div data-id='border-card' className='flex-1'>
           <div
             data-id='border-card-inner'

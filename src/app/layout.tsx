@@ -1,6 +1,8 @@
 import Header from '@/components/Header'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import 'slick-carousel/slick/slick-theme.css'
+import 'slick-carousel/slick/slick.css'
 import './globals.css'
 
 const geistSans = localFont({

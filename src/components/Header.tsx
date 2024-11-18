@@ -36,7 +36,7 @@ const NavLink: React.FC<{
     <Link
       className={cn(
         'hover:text-bright transition-all',
-        isActive && 'text-bright underline',
+        isActive && 'text-primary underline hover:text-primary',
       )}
       href={href}
     >
