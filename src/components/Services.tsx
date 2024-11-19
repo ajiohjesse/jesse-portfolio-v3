@@ -6,7 +6,7 @@ import WebDev from './icons/WebDev'
 const Services = () => {
   return (
     <section className='prose border-b py-12'>
-      <h2 className='text-bright font-mono text-xl font-bold uppercase tracking-tight'>
+      <h2 className='font-mono text-xl font-bold uppercase tracking-tight text-bright'>
         <span className='text-primary'>2.</span> What I DO.
       </h2>
 
@@ -15,10 +15,10 @@ const Services = () => {
           <div data-id='border-card' key={index} className='shadow-2xl'>
             <div
               data-id='border-card-inner'
-              className='flex h-[calc(100%-2px)] flex-1 flex-col rounded bg-card p-4 shadow-2xl md:p-6'
+              className='flex flex-1 flex-col rounded bg-card p-4 shadow-2xl md:p-6'
             >
               {service.icon}
-              <h3 className='text-bright font-mono'>{service.name}</h3>
+              <h3 className='font-mono text-bright'>{service.name}</h3>
               <p>{service.description}</p>
             </div>
           </div>

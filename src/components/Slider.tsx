@@ -6,10 +6,9 @@ const Slider: React.FC<React.PropsWithChildren> = ({ children }) => {
     dots: true,
     arrows: false,
     infinite: true,
-    speed: 300,
+    speed: 200,
     slidesToShow: 2,
     slidesToScroll: 1,
-    // autoplay: true,
     customPaging: i => (
       <span className='grid size-8 place-items-center rounded-full bg-card text-center text-xs transition-colors [.slick-active_&]:bg-primary [.slick-active_&]:text-background'>
         {i + 1}

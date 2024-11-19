@@ -59,6 +59,7 @@
     position: relative;
     border-radius: 4px;
     min-width: fit-content;
+    padding: 1px;
   }
 
   [data-id='border-card']::after {
@@ -70,19 +71,19 @@
       hsla(145, 90%, 70%, 0.5)
     );
     position: absolute;
-    top: -500%;
-    left: -500%;
-    bottom: -500%;
-    right: -500%;
+    top: -120%;
+    left: -120%;
+    bottom: -120%;
+    right: -120%;
     animation: rotate 20s linear infinite;
-    z-index: 1;
+    z-index: 0;
+    will-change: transform, opacity;
   }
 
   [data-id='border-card-inner'] {
-    margin: 1px;
     position: relative;
     z-index: 10;
-    height: calc(100% - 2px);
+    height: 100%;
   }
 
   @keyframes rotate {
