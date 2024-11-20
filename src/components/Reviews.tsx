@@ -3,11 +3,11 @@ import Slider from './Slider'
 const Reviews = () => {
   return (
     <section className='border-b py-12'>
-      <h2 className='text-bright mb-5 font-mono text-xl font-bold uppercase tracking-tight'>
+      <h2 className='mb-5 font-mono text-xl font-bold uppercase tracking-tight text-bright'>
         <span className='text-primary'>5.</span> Reviews.
       </h2>
 
-      <div className='pb-12'>
+      <div className='pb-12 pt-6'>
         <Slider>
           {REVIEWS.map((review, index) => (
             <ReviewCard key={index} {...review} />

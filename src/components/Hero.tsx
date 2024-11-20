@@ -14,7 +14,7 @@ const Hero = () => {
           className='size-32 object-cover object-top'
         />
       </Sparkles>
-      <h1 className='upper text-bright font-mono text-4xl font-bold uppercase tracking-tight xs:text-[2.5rem]'>
+      <h1 className='upper font-mono text-4xl font-bold uppercase tracking-tight text-bright xs:text-[2.5rem]'>
         Jesse Ajioh.
       </h1>
       <p className='mt-2 font-mono text-primary'>| Fullstack Web Developer.</p>
@@ -24,9 +24,7 @@ const Hero = () => {
         experience to the table and help you achieve your goals.
       </p>
 
-      <button className='mt-6 rounded bg-primary px-6 py-3 text-sm font-bold text-background'>
-        Send Me A Message
-      </button>
+      <button className='button mt-6'>Send Me A Message</button>
     </section>
   )
 }

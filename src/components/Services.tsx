@@ -10,7 +10,7 @@ const Services = () => {
         <span className='text-primary'>2.</span> What I DO.
       </h2>
 
-      <div className='relative grid gap-4 sm:grid-cols-2'>
+      <div className='relative grid gap-4 pt-6 sm:grid-cols-2'>
         {SERVICES.map((service, index) => (
           <div data-id='border-card' key={index} className='shadow-2xl'>
             <div

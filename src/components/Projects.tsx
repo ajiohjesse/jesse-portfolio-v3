@@ -9,11 +9,11 @@ import Sparkles from './sparkles'
 const Projects = () => {
   return (
     <section className='border-b py-12'>
-      <h2 className='text-bright mb-5 font-mono text-xl font-bold uppercase tracking-tight'>
+      <h2 className='mb-5 font-mono text-xl font-bold uppercase tracking-tight text-bright'>
         <span className='text-primary'>4.</span> Side Projects.
       </h2>
 
-      <div className='pb-12'>
+      <div className='pb-12 pt-6'>
         <Slider>
           {PROJECTS.map((project, index) => (
             <ProjectCard key={index} {...project} />
@@ -48,7 +48,7 @@ const ProjectCard = (props: ProjectCardProps) => {
         className='h-[160px] w-full rounded object-cover object-top'
       />
       <Sparkles className='mt-6'>
-        <h3 className='text-bright line-clamp-[2] font-mono'>{name}</h3>
+        <h3 className='line-clamp-[2] font-mono text-bright'>{name}</h3>
       </Sparkles>
 
       <p className='mb-6 line-clamp-4 text-sm'>{description}</p>
@@ -100,34 +100,7 @@ const PROJECTS: ProjectCardProps[] = [
     image: incognito,
     description:
       'An anonymous messaging app that allows users to send messages to each other without revealing their identity.',
-    tags: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'MongoDB'],
-    githubUrl: 'https://github.com/jesse-ai/jesse-portfolio-v3',
-    previewUrl: '/images/jesse-portfolio.png',
-  },
-  {
-    name: 'Incognito',
-    image: incognito,
-    description:
-      'An anonymous messaging app that allows users to send messages to each other without revealing their identity.',
-    tags: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'MongoDB'],
-    githubUrl: 'https://github.com/jesse-ai/jesse-portfolio-v3',
-    previewUrl: '/images/jesse-portfolio.png',
-  },
-  {
-    name: 'Incognito',
-    image: incognito,
-    description:
-      'An anonymous messaging app that allows users to send messages to each other without revealing their identity.',
-    tags: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'MongoDB'],
-    githubUrl: 'https://github.com/jesse-ai/jesse-portfolio-v3',
-    previewUrl: '/images/jesse-portfolio.png',
-  },
-  {
-    name: 'Incognito',
-    image: incognito,
-    description:
-      'An anonymous messaging app that allows users to send messages to each other without revealing their identity.',
-    tags: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'MongoDB'],
+    tags: ['Next.js', 'TypeScript', 'Tailwind', 'MongoDB'],
     githubUrl: 'https://github.com/jesse-ai/jesse-portfolio-v3',
     previewUrl: '/images/jesse-portfolio.png',
   },

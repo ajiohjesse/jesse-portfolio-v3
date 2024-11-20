@@ -1,11 +1,11 @@
 const Skills = () => {
   return (
     <section className='border-b py-12'>
-      <h2 className='text-bright mb-5 font-mono text-xl font-bold uppercase tracking-tight'>
+      <h2 className='mb-5 font-mono text-xl font-bold uppercase tracking-tight text-bright'>
         <span className='text-primary'>3.</span> My Skills.
       </h2>
 
-      <div className='flex flex-wrap gap-2'>
+      <div className='flex flex-wrap gap-2 pt-6'>
         {SKILLS.map((skill, index) => (
           <p
             key={index}
@@ -32,14 +32,14 @@ const SKILLS = [
   'Node',
   'Deno',
   'Express.js',
-  'SQL',
-  'Postgres',
+  'Hono.js',
+  'PostgreSQL',
   'MongoDB',
   'Git',
   'GitHub',
   'Figma',
   'Photoshop',
-  'Adobe XD',
   'Illustrator',
   'Jira',
+  'MS Excel',
 ]
